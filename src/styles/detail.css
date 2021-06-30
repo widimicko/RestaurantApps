@@ -1,0 +1,68 @@
+#restaurant-detail {
+  margin: 2em auto;
+  width: 100%;
+  max-width: 800px;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+ 
+#restaurant-detail .restaurant_info {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px 16px;
+}
+
+@media screen and (min-width: 700px) {
+  #restaurant-detail .restaurant_info {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+#restaurant-detail .restaurant_image {
+  width: 100%;
+  max-width: 400px;
+}
+ 
+#restaurant-detail h4 {
+  margin: 8px 0;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#submit-review {
+  width: 70px;
+  color: black;
+  background-color: white;
+  outline-color: black;
+  border-radius: 5%;
+}
+
+.reviews-container {
+  overflow-y: auto;
+  max-height: 10em;
+}
+
+.like {
+  font-size: 18px;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: #db0000;
+  color: white;
+  border: 0;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

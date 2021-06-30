@@ -1,0 +1,45 @@
+.restaurants {
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+@media screen and (min-width: 650px) {
+    .restaurant-content {
+        padding: 16px 32px 32px 32px;
+    }
+
+    .restaurant-image {
+      max-height: 200px;
+    }
+
+    .restaurant-info {
+      font-size: 16px;
+  }
+
+    .restaurant-description {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .hero {
+      background-image: url("../public/images/hero/hero-large.jpg");
+    }
+
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 16px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .hero {
+      background-image: url("../public/images/hero/hero-xlarge.jpg");
+    }
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

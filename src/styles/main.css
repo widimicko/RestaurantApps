@@ -1,0 +1,257 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+/* HEADER */
+
+li {
+  list-style: none;
+}
+
+a {
+  font-size: 33px;
+  text-decoration: none;
+}
+
+button {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+.header{
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+}
+
+.hamburger {
+  display: none;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  margin-left: 5rem;
+  min-height: 44px;
+  min-width: 44px;
+  font-size: 25px;
+}
+
+.nav-link{
+  font-weight: 400;
+  color: #475569;
+}
+
+.nav-link:hover{
+  font-weight: bold;
+}
+
+.nav-logo {
+  color: black;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.nav-logo:hover {
+  font-weight: bolder;
+}
+
+.skip {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 100;
+  font-size: 2rem;
+}
+
+.skip:focus {
+  top: 0;
+}
+
+/* HERO */
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 380px;
+  width: 100%;
+  margin-bottom: 2em;
+  text-align: center;
+  background-image: url("../public/images/hero/hero-small.jpg");
+  background-position: center;
+  background-color: whitesmoke;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+  text-shadow: 2px 2px black;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+/* Loader */
+
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db; 
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Restaurants */
+
+.restaurants {
+  margin: 32px 10% auto;
+  text-align: left;
+    
+}
+
+.restaurant {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.restaurant-content {
+  padding: 16px;
+}
+
+.restaurant-image {
+  width: 100%;
+  max-height: 400px;
+}
+
+.restaurant-info {
+  font-size: small;
+}
+
+.restaurant-name {
+  font-weight: bold;
+  min-height: 44px;
+  min-width: 44px;
+  margin-top: 16px;
+  transition: 0.3s opacity;
+}
+
+.restaurant-name:hover {
+  opacity: 0.5;
+}
+
+.restaurant-name a {
+    color: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.restaurant-info {
+    font-size: 22px;
+}
+
+.restaurant-description {
+  margin-top: 16px;
+  font-size: 25px;
+  line-height: 1.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+/* FOOTER */
+
+.footer {
+    border-top: 1px solid #E2E8F0;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3em;
+    font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+}
+
+.skeleton:empty {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  box-sizing: content-box;
+  height: 290px;
+  background-color: #ffffff;
+  background-image: linear-gradient( 100deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 80% ),linear-gradient( #cccccc 20px, transparent 0 ),linear-gradient( #E0E0E0 60px, transparent 0 ),linear-gradient( #E0E0E0 150px, transparent 0 );
+  background-repeat: repeat-y;
+  background-size: 50px 290px,360px 290px,360px 290px,360px 290px;
+  background-position: 0 0,20px 173px,18px 201px,19px 6px;
+  animation: shineForSkeleton 1s infinite;
+}
+@keyframes shineForSkeleton {
+  to {
+    background-position: 100% 0,20px 173px,18px 201px,19px 6px;
+  }
+}
